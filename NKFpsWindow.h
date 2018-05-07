@@ -15,5 +15,5 @@
  *
  *  @return NKFpsWindow
  */
-+ (NKFpsWindow *)defaultNFFpsWindow;
++ (NKFpsWindow *)defaultNKFpsWindow;
 @end

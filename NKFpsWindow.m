@@ -26,15 +26,15 @@
 }
 
 # pragma mark - init
-+ (NKFpsWindow *)defaultNFFpsWindow{
-    static NKFpsWindow *_defaultNFFpsWindow;
++ (NKFpsWindow *)defaultNKFpsWindow{
+    static NKFpsWindow *_defaultNKFpsWindow;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _defaultNFFpsWindow = [[NKFpsWindow alloc] init];
+        _defaultNKFpsWindow = [[NKFpsWindow alloc] init];
         if([[UIDevice currentDevice].systemVersion floatValue] >= 9.0)
-            _defaultNFFpsWindow.rootViewController = [UIViewController new]; // iOS 9 requires rootViewController for any window
+            _defaultNKFpsWindow.rootViewController = [UIViewController new]; // iOS 9 requires rootViewController for any window
     });
-    return _defaultNFFpsWindow;
+    return _defaultNKFpsWindow;
 }
 
 - (instancetype)init{
